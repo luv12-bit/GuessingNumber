@@ -1,0 +1,424 @@
+/* 
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+#wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin: 15px 0;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+
+.form {
+    margin: 30px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.guessField {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guessField::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.guessField:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.guessSubmit {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.guessSubmit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+}
+
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.guesses {
+    display: inline;
+    color: #ffcc00;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.lastResult {
+    display: inline;
+    color: #4cd137;
+    font-weight: 600;
+}
+
+.lowOrHi {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.lowOrHi h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+.button {
+    margin-top: 25px;
+}
+
+#newGame {
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 239, 125, 0.4);
+    letter-spacing: 0.5px;
+}
+
+#newGame:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 239, 125, 0.6);
+}
+
+
+@media (max-width: 600px) {
+    #wrapper {
+        padding: 25px;
+        margin: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .guessSubmit, #newGame {
+        padding: 12px 20px;
+    }
+} */
+ /* Modern CSS Reset & Base Styles */
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --accent: #4cc9f0;
+  --text: #2b2d42;
+  --light: #f8f9fa;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+  --radius: 12px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+/* Glassmorphism Card */
+#wrapper {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  background: linear-gradient(to right, #4361ee, #3a0ca3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  color: var(--text);
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Elements */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.guessField {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #e9ecef;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.guessField:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.guessSubmit {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guessSubmit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Results Section */
+.result {
+  background: rgba(233, 236, 239, 0.5);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.result p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.guesses {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.lastResult {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.lowOrHi {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(67, 97, 238, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+}
+
+.lowOrHi h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* New Game Button */
+#newGame {
+  background: linear-gradient(135deg, var(--success), #2e7d32);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#newGame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #wrapper {
+    padding: 1.5rem;
+  }
+  
+  .form {
+    margin: 1.5rem 0;
+  }
+  
+  .guessField, .guessSubmit {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #wrapper {
+    padding: 1.25rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .result p {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  #newGame {
+    padding: 0.8rem;
+  }
+}
+
+/* Micro-interactions */
+button:active {
+  transform: translateY(0) !important;
+}
+
+/* Accessibility Focus Styles */
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
